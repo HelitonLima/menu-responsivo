@@ -1,3 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
 body {
     margin: 0;
 }
@@ -14,6 +22,9 @@ nav {
     padding: 0 20px;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: calc(100% - 40px);
+    top: 0;
 }
 
 h1,
@@ -47,7 +58,7 @@ button {
     display: none;
 }
 
-li:hover,
+a:hover,
 h1:hover,
 button:hover {
     cursor: pointer;
@@ -55,8 +66,10 @@ button:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-button:focus~ul {
-    height: 260px;
+.content {
+    background-color: #606060;
+    width: 100%;
+    height: 100vh;
 }
 
 @media (max-width: 700px) {
@@ -88,5 +101,9 @@ button:focus~ul {
     li,
     ul {
         width: 100%;
+    }
+
+    ul.responsivo {
+        height: 260px;
     }
 }
